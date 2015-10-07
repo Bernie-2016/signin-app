@@ -1,6 +1,9 @@
-angular.module('SteroidsApplication', [
-  'supersonic'
-])
-.controller 'IndexController', ($scope, supersonic) ->
+angular.module('SteroidsApplication', ['supersonic']).controller 'IndexController', ($scope, supersonic) ->
+  $scope.navbarTitle = 'Scan QR Code'
 
-  $scope.navbarTitle = "Welcome to Supersonic!"
+  $scope.scan = ->
+    cordova.plugins.barcodeScanner.scan (result) ->
+      alert "Got #{result.text}"
+    ,
+      (error) ->
+        alert "Scanning failed: #{error}"

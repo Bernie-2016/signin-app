@@ -1,14 +1,6 @@
-# Read more about app configs at http://docs.appgyver.com
-
 module.exports =
   app:
-    name: "SignupQRScanner"
-
-  # steroidsAppId and steroidsApiKey headers are required by Supersonic Data
-  # network:
-  #   extraResponseHeaders:
-  #     "Access-Control-Allow-Origin": "*"
-  #     "Access-Control-Allow-Headers": "Content-Type, X-Requested-With, steroidsAppId, steroidsApiKey"
+    name: 'SignupQRScanner'
 
   webView:
     viewsIgnoreStatusBar: false
@@ -21,4 +13,4 @@ module.exports =
   # Applies on iOS only
   statusBar:
     enabled: true
-    style: "default"
+    style: 'default'
