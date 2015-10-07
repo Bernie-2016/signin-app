@@ -3,7 +3,9 @@ angular.module('SteroidsApplication', ['supersonic']).controller 'IndexControlle
 
   $scope.scan = ->
     cordova.plugins.barcodeScanner.scan (result) ->
-      alert "Got #{result.text}"
+      $.post(
+        'https://sanders-api.herokuapp.com/api/v1/signups', signups: [JSON.parse(result.text.replace(/\\"/g, '"'))]
+      ).done( -> alert 'Signup accepted!' ).fail ( -> alert 'Error, please try again.' )
     ,
       (error) ->
-        alert "Scanning failed: #{error}"
+        alert 'Error, please try again.'

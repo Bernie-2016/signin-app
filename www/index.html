@@ -15,13 +15,11 @@
     <script src='/components/angular/angular.js'></script>
     <script src='/components/supersonic/supersonic.js'></script>
     <script src='/components/webcomponentsjs/webcomponents.js'></script>
+    <script src='/components/jquery/dist/jquery.js'></script>
     <script src='/scripts/application.js'></script>
   </head>
   <body ng-app='SteroidsApplication'>
     <div class='padding' ng-controller='IndexController'>
-      <super-navbar>
-        <super-navbar-title ng-bind='navbarTitle'></super-navbar-title>
-      </super-navbar>
       <div class='button-scan-wrapper'>
         <img class='logo' src='/img/logo.png' alt='Bernie 2016' />
         <img ng-click='scan()' class='btn' src='/img/scan-btn.png' alt='Scan Code' />
