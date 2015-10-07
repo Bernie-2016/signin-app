@@ -11,6 +11,7 @@ angular.module('SteroidsApplication', ['supersonic']).controller 'IndexControlle
         email: info[3]
         zip: info[4]
         canText: info[5]
+        event: $('#event-key').val()
       ]
       ).done( -> alert 'Signup accepted!' ).fail ( -> alert 'Error, please try again.' )
     ,
