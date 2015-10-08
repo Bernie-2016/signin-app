@@ -3,6 +3,7 @@ angular.module('SteroidsApplication', ['supersonic']).controller 'IndexControlle
 
   $scope.scan = ->
     cordova.plugins.barcodeScanner.scan (result) ->
+      return if result.text is ''
       info = result.text.replace(/"/g, '').split(',')
       $.post('https://sanders-api.herokuapp.com/api/v1/signups', signups: [
         first_name: info[0]
