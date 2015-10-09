@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Freight Sans Medium';
+  src: url(../fonts/FreightSans-Medium.ttf);
+}
+
 div.button-scan-wrapper {
   text-align: center;
   padding: 10%;
@@ -10,5 +15,16 @@ div.button-scan-wrapper {
   p#event-key {
     margin-top: 60%;
     margin-bottom: 15%;
+  }
+
+  input#scan {
+    border: none;
+    background-color: #FD505E;
+    width: 100%;
+    font-family: 'Freight Sans Medium';
+    text-transform: uppercase;
+    color: white;
+    font-size: 30px;
+    padding: 10px;
   }
 }

@@ -14,7 +14,24 @@ angular.module('SteroidsApplication', ['supersonic']).controller 'IndexControlle
         canText: info[5]
         event: $('#event-key-input').val()
       ]
-      ).done( -> alert 'Signup accepted!' ).fail ( -> alert 'Error, please try again.' )
+      ).done( -> 
+        $('input#scan').animate
+          backgroundColor: '#4ACC66'
+        , 500
+        setTimeout ->
+          $('input#scan').val('Success!')
+        , 250
+        setTimeout ->
+          $('input#scan').animate
+            backgroundColor: '#FD505E'
+          , 500
+        , 1500
+        setTimeout ->
+          $('input#scan').val('Scan Code')
+        , 1750
+      ).fail ( -> 
+        alert 'Error, please try again.' 
+      )
     ,
       (error) ->
         alert 'Error, please try again.'
