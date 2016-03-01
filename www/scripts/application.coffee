@@ -12,7 +12,7 @@ angular.module('SteroidsApplication', ['supersonic']).controller 'IndexControlle
         email: info[3]
         zip: info[4]
         canText: info[5]
-        extra_fields: info[6]
+        extra_fields: info.slice(6).join(',')
         event: $('#event-key-input').val()
       ]
       ).done( -> 
