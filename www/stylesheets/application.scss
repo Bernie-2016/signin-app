@@ -12,15 +12,22 @@ div.button-scan-wrapper {
     width: 100%;
   }
 
-  input#scan {
-    margin-top: 75%;
-    border: none;
-    background-color: #FD505E;
-    width: 100%;
-    font-family: 'Freight Sans Medium';
-    text-transform: uppercase;
-    color: white;
-    font-size: 30px;
-    padding: 10px;
+  div#bottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 15%;
+
+    input#scan {
+      border: none;
+      background-color: #FD505E;
+      width: 100%;
+      font-family: 'Freight Sans Medium';
+      text-transform: uppercase;
+      color: white;
+      font-size: 30px;
+      padding: 10px;
+      margin-bottom: 5%;
+    }
   }
 }

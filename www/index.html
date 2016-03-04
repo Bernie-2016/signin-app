@@ -23,8 +23,11 @@
     <div class='padding' ng-controller='IndexController'>
       <div class='button-scan-wrapper'>
         <img class='logo' src='/img/logo.png' alt='Bernie 2016' />
-        <input type='submit' id='scan' ng-click='scan()' value='Scan Code' />
-        <p>Direct visitors to <b>http://bernie.to/qr</b> to fill out the signup form and generate a QR code.</p>
+        <div id='bottom'>
+          <input type='submit' id='scan' ng-click='scan()' value='Scan Code' />
+          <p>Direct visitors to the event URL to fill out the signup form and generate a QR code.</p>
+          <p>If you don't have an event URL, direct visitors to <strong>http://bernie.to/qr</strong>.</p>
+        </div>
       </div>
     </div>
   </body>
