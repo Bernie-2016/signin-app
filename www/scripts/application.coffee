@@ -11,9 +11,8 @@ angular.module('SteroidsApplication', ['supersonic']).controller 'IndexControlle
         phone: info[2]
         email: info[3]
         zip: info[4]
-        canText: info[5]
+        can_text: info[5]
         extra_fields: info.slice(6).join(',')
-        event: $('#event-key-input').val()
       ]
       ).done( -> 
         $('input#scan').animate
